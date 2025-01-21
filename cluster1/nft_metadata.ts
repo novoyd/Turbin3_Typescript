@@ -17,29 +17,30 @@ umi.use(signerIdentity(signer));
         // Follow this JSON structure
         // https://docs.metaplex.com/programs/token-metadata/changelog/v1.0#json-structure
 
-         const image =  "https://arweave.net/7WRZ1ZYCkTi4XCL9dysUb3DMz8kFUApYZuRBqx1UQAXt";
+         const image =  "https://devnet.irys.xyz/7WRZ1ZYCkTi4XCL9dysUb3DMz8kFUApYZuRBqx1UQAXt";
         const metadata = {
-            name: "?",
-            symbol: "?",
-            description: "?",
-            image: "?",
+            name: "Lelouch_RUG",
+            symbol: "LR",
+            description: "Finest rugs of Persia",
+            image,
             attributes: [
-                { trait_type: '?', value: '?' }
+                { trait_type: 'wifhat', value: 'no' }
             ],
             properties: {
                 files: [
                     {
                         type: "image/png",
-                        uri: "?"
+                        uri: image,
                     },
                 ]
             },
             creators: []
         };
-        const myUri = ???
+        const myUri = await umi.uploader.uploadJson(metadata)
         console.log("Your metadata URI: ", myUri);
     }
     catch(error) {
         console.log("Oops.. Something went wrong", error);
     }
 })();
+//https://devnet.irys.xyz/6PouQhRTFQLe1iUbbVugZvT3JvVFmDkcAbaCWqQm7QFL

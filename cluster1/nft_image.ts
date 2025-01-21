@@ -20,8 +20,8 @@ umi.use(signerIdentity(signer));
         //2. Convert image to generic file.
         //3. Upload image
 
-        const image = await readFile("/Users/kyansharma/Documents/Coding/Solana/Turbin3/solana-starter/ts/generug.png");
-        const file = createGenericFile(image, "rug.png",{contentType: "image/png", });
+        const image = await readFile("cluster1/generug.png");
+        const file = createGenericFile(image, "lelouchrug.png",{contentType: "image/png", });
         const [myUri] = await umi.uploader.upload([file]); 
         console.log("Your image URI: ", myUri);
     }
@@ -29,3 +29,4 @@ umi.use(signerIdentity(signer));
         console.log("Oops.. Something went wrong", error);
     }
 })();
+//https://devnet.irys.xyz/7WRZ1ZYCkTi4XCL9dysUb3DMz8kFUApYZuRBqx1UQAXt
